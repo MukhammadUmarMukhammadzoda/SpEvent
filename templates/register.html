@@ -1,6 +1,12 @@
 <form method="post">
     {% csrf_token %}
-    <input type="text" placeholder="Enter Your name" name="name">
+    {% if event.type == "Team" %}
+    <input type="text" placeholder="Enter Your Team`s name" name="name">
+    {% else %}
+    <input type="text" placeholder="Enter Your  name" name="name">
+    {% endif %}
+
+
     <input type="text" placeholder="Enter Your Phone" name="phone">
     <input type="email" placeholder="Enter Your Email" name="email">
     <input type="radio" id="1" name="fav_language" value="1">

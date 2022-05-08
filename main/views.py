@@ -48,5 +48,5 @@ def register(request, id):
         messages.success(request, f"{name} we have registred You and sent messages to Your email addres")        
         return redirect('/')
 
-    return render(request, 'register.html',)
+    return render(request, 'register.html', {'event' : event})
 
