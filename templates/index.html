@@ -1,8 +1,20 @@
 {% for event in events %}
      <h2>{{event.name}}</h2>
      <h3>{{event.title}}</h3>
+
+     <a href="{% url 'vieww' event.id  %}">Read more</a>
      
 
 
 
 {% endfor %}
+
+
+{% if messages %}
+
+{% for message in messages %}
+
+{{message}}
+
+{% endfor %}
+{% endif %}

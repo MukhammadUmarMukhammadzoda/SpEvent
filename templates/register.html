@@ -1,0 +1,18 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="Enter Your name" name="name">
+    <input type="text" placeholder="Enter Your Phone" name="phone">
+    <input type="email" placeholder="Enter Your Email" name="email">
+    <input type="radio" id="1" name="fav_language" value="1">
+    <label for="html">B-TECH</label><br>
+    <input type="radio" id="2" name="fav_language" value="2">
+    <label for="css">BBA</label><br>
+    <input type="radio" id="3" name="fav_language" value="3">
+    <label for="javascript">B.Applied</label>
+  
+
+    <button type="submit">Register</button>
+
+</form>
+
+

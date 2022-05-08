@@ -1,6 +1,4 @@
 from distutils.command.upload import upload
-from pyexpat import model
-from turtle import mode
 from xmlrpc.client import TRANSPORT_ERROR
 from django.db import models
 
@@ -36,8 +34,8 @@ class Registration(models.Model):
     name = models.CharField(max_length=100, null=True)
     phone = models.CharField(max_length=50, null=True)
     email = models.EmailField(null=True, blank=True)
-    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='participants')
-    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='participants', null=True)
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE , null=True)
 
     def __str__(self):
         return self.name
